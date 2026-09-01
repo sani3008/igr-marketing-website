@@ -1,14 +1,8 @@
-import tsuyosaImg from "@/assets/tsuyosa.jpg.asset.json";
-import juttilandImg from "@/assets/juttiland.jpg.asset.json";
-import wakeufreshImg from "@/assets/wakeufresh.jpg.asset.json";
-import latchanamImg from "@/assets/latchanam.jpg.asset.json";
-import mocaraImg from "@/assets/mocara.jpg.asset.json";
-import top07Img from "@/assets/top07number.jpg.asset.json";
 
 export const contact = {
-  phone: "+91 93543 30293",
-  phoneHref: "tel:+919354330293",
-  whatsapp: "https://wa.me/919354330293",
+  phone: "01169266451",
+  phoneHref: "tel:01169266451",
+  whatsapp: "https://wa.me/01169266451",
   email: "hello@igrmarketing.com",
   emailHref: "mailto:hello@igrmarketing.com",
   office: "D Mall, Netaji Subhash Place, Delhi",
@@ -28,12 +22,17 @@ export const nav: NavItem[] = [
   { label: "Contact", to: "/contact" },
 ];
 
+export type ServiceItem = {
+  name: string;
+  slug: string;
+};
+
 export type ServiceGroup = {
   id: string;
   index: string;
   title: string;
   summary: string;
-  items: string[];
+  items: ServiceItem[];
 };
 
 export const serviceGroups: ServiceGroup[] = [
@@ -43,7 +42,12 @@ export const serviceGroups: ServiceGroup[] = [
     title: "Strategy",
     summary:
       "The commercial thinking that comes before spend. We diagnose the constraint, then design the growth model around it.",
-    items: ["Brand Strategy", "Growth Strategy", "Market Research", "Go-To-Market Strategy"],
+    items: [
+      { name: "Brand Strategy", slug: "brand-strategy" },
+      { name: "Growth Strategy", slug: "growth-strategy" },
+      { name: "Market Research", slug: "market-research" },
+      { name: "Go-To-Market Strategy", slug: "go-to-market-strategy" }
+    ],
   },
   {
     id: "marketing",
@@ -52,13 +56,13 @@ export const serviceGroups: ServiceGroup[] = [
     summary:
       "Full-funnel demand built on channel economics — acquisition, nurture and retention operating as one system.",
     items: [
-      "Performance Marketing",
-      "Search Engine Optimization",
-      "Social Media Marketing",
-      "Content Marketing",
-      "Email Marketing",
-      "WhatsApp Marketing",
-      "Lead Generation",
+      { name: "Performance Marketing", slug: "performance-marketing" },
+      { name: "Search Engine Optimization", slug: "search-engine-optimization" },
+      { name: "Social Media Marketing", slug: "social-media-marketing" },
+      { name: "Content Marketing", slug: "content-marketing" },
+      { name: "Email Marketing", slug: "email-marketing" },
+      { name: "WhatsApp Marketing", slug: "whatsapp-marketing" },
+      { name: "Lead Generation", slug: "lead-generation" },
     ],
   },
   {
@@ -67,7 +71,12 @@ export const serviceGroups: ServiceGroup[] = [
     title: "Creative",
     summary:
       "Studio-grade identity and campaign work, made to earn attention and hold up under performance pressure.",
-    items: ["Branding", "Graphic Design", "Video Production & Editing", "Creative Campaigns"],
+    items: [
+      { name: "Branding", slug: "branding" },
+      { name: "Graphic Design", slug: "graphic-design" },
+      { name: "Video Production & Editing", slug: "video-production-editing" },
+      { name: "Creative Campaigns", slug: "creative-campaigns" }
+    ],
   },
   {
     id: "technology",
@@ -76,12 +85,12 @@ export const serviceGroups: ServiceGroup[] = [
     summary:
       "Sites, apps and platforms engineered for speed, search and conversion — shipped by senior engineers.",
     items: [
-      "Website Development",
-      "Web Application Development",
-      "Mobile App Development",
-      "E-commerce Development",
-      "CRM Solutions",
-      "AI Automation",
+      { name: "Website Development", slug: "website-development" },
+      { name: "Web Application Development", slug: "web-application-development" },
+      { name: "Mobile App Development", slug: "mobile-app-development" },
+      { name: "E-commerce Development", slug: "ecommerce-development" },
+      { name: "CRM Solutions", slug: "crm-solutions" },
+      { name: "AI Automation", slug: "ai-automation" },
     ],
   },
   {
@@ -90,7 +99,12 @@ export const serviceGroups: ServiceGroup[] = [
     title: "Commerce",
     summary:
       "Marketplace and quick-commerce operations run end to end: catalogue, content, pricing, visibility and ads.",
-    items: ["Amazon Marketing", "Flipkart Marketing", "Marketplace Management", "Quick Commerce"],
+    items: [
+      { name: "Amazon Marketing", slug: "amazon-marketing" },
+      { name: "Flipkart Marketing", slug: "flipkart-marketing" },
+      { name: "Marketplace Management", slug: "marketplace-management" },
+      { name: "Quick Commerce", slug: "quick-commerce" }
+    ],
   },
   {
     id: "data",
@@ -98,7 +112,12 @@ export const serviceGroups: ServiceGroup[] = [
     title: "Data & Automation",
     summary:
       "Clean measurement and honest reporting, so every decision is made on numbers leadership can trust.",
-    items: ["Analytics & Tracking", "Conversion Rate Optimization", "Dashboards & Reporting", "Attribution"],
+    items: [
+      { name: "Analytics & Tracking", slug: "analytics-tracking" },
+      { name: "Conversion Rate Optimization", slug: "conversion-rate-optimization" },
+      { name: "Dashboards & Reporting", slug: "dashboards-reporting" },
+      { name: "Attribution", slug: "attribution" }
+    ],
   },
 ];
 
@@ -141,7 +160,7 @@ export const projects: Project[] = [
     name: "Tsuyosa",
     category: "DTC / Brand & Growth",
     url: "https://tsuyosa.com/",
-    image: tsuyosaImg.url,
+    image: "/projects/tsuyosa-home.jpg",
     featured: true,
     overview:
       "A direct-to-consumer brand built to hold a premium position while scaling acquisition across owned and paid channels.",
@@ -161,7 +180,7 @@ export const projects: Project[] = [
     name: "Juttiland",
     category: "Fashion / E-commerce",
     url: "https://juttiland.com/",
-    image: juttilandImg.url,
+    image: "/projects/juttiland-home.jpg",
     featured: false,
     overview:
       "A heritage-craft footwear label translated into a modern e-commerce experience for a national audience.",
@@ -181,7 +200,7 @@ export const projects: Project[] = [
     name: "WakeUFresh",
     category: "Sleep & Comfort",
     url: "https://www.wakeufresh.com/",
-    image: wakeufreshImg.url,
+    image: "/projects/wakeufresh-home.jpg",
     featured: false,
     overview:
       "A sleep and comfort brand positioned around everyday wellbeing, with a commerce experience built for considered purchases.",
@@ -201,7 +220,7 @@ export const projects: Project[] = [
     name: "Latchanam",
     category: "Luxury / Silk Sarees",
     url: "https://www.latchanam.com/",
-    image: latchanamImg.url,
+    image: "/projects/latchanam-home.jpg",
     featured: true,
     overview:
       "A luxury silk saree house presented with the restraint and richness the category demands, online and in campaign.",
@@ -221,7 +240,7 @@ export const projects: Project[] = [
     name: "Mocara",
     category: "Premium Perfumes",
     url: "https://shopmocara.com/",
-    image: mocaraImg.url,
+    image: "/projects/mocara-home.jpg",
     featured: false,
     overview:
       "A premium fragrance brand built for online discovery, where scent has to be communicated entirely through design and language.",
@@ -241,7 +260,7 @@ export const projects: Project[] = [
     name: "Top07Number",
     category: "UK Telecom",
     url: "https://www.easyvipmobilenumber.co.uk/",
-    image: top07Img.url,
+    image: "/projects/top07number-home.jpg",
     featured: false,
     overview:
       "A UK VIP mobile number marketplace where inventory scale, search visibility and instant trust decide the sale.",

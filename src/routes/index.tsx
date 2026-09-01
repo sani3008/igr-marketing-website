@@ -165,11 +165,12 @@ function Home() {
       <section className="container-igr py-24 md:py-32">
         <div className="flex flex-wrap items-end justify-between gap-8">
           <SectionHead eyebrow="Selected work" title="Brands built to be remembered — and to convert." />
-          <Link to="/work" className="link-underline pb-2 text-sm font-semibold text-brand">
-            View All Work →
+          <Link to="/work" className="group flex items-center gap-2 pb-2 text-sm font-semibold text-brand transition-colors hover:text-brand/80">
+            View All Work
+            <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
           </Link>
         </div>
-        <div className="mt-16">
+        <div className="mt-20 md:mt-24">
           <PortfolioGrid items={projects} />
         </div>
       </section>
@@ -221,11 +222,18 @@ function Home() {
           </div>
           <div className="mt-14 grid gap-px bg-border sm:grid-cols-2 lg:grid-cols-3">
             {insights.slice(0, 3).map((a, i) => (
-              <Reveal key={a.slug} delay={i * 70} className="group bg-background p-8 md:p-10">
-                <p className="text-xs font-bold tracking-[0.18em] text-brand uppercase">{a.category}</p>
-                <h3 className="mt-5 font-display text-2xl leading-tight tracking-tight">{a.title}</h3>
-                <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{a.excerpt}</p>
-                <p className="mt-6 text-xs text-muted-foreground">{a.readTime}</p>
+              <Reveal key={a.slug} delay={i * 70} className="group flex h-full flex-col justify-between bg-background p-8 transition-colors hover:bg-ink/[0.02] md:p-10">
+                <a href="#" className="flex h-full flex-col">
+                  <div>
+                    <p className="text-xs font-bold tracking-[0.18em] text-brand uppercase">{a.category}</p>
+                    <h3 className="mt-5 font-display text-2xl leading-tight tracking-tight transition-colors group-hover:text-brand">{a.title}</h3>
+                    <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{a.excerpt}</p>
+                  </div>
+                  <div className="mt-8 flex flex-1 items-end justify-between border-t border-border/50 pt-6">
+                    <p className="text-xs text-muted-foreground">{a.readTime}</p>
+                    <span className="text-brand opacity-0 transition-all duration-300 group-hover:translate-x-1 group-hover:opacity-100">→</span>
+                  </div>
+                </a>
               </Reveal>
             ))}
           </div>

@@ -32,7 +32,7 @@ export const Route = createFileRoute("/services")({
             g.items.map((item, i) => ({
               "@type": "ListItem",
               position: gi * 10 + i + 1,
-              item: { "@type": "Service", name: item, provider: { "@type": "Organization", name: "IGR Marketing" } },
+              item: { "@type": "Service", name: item.name, provider: { "@type": "Organization", name: "IGR Marketing" } },
             })),
           ),
         }),

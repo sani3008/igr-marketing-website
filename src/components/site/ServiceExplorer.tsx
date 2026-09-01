@@ -52,8 +52,14 @@ export function ServiceExplorer({ expandAll = false }: { expandAll?: boolean }) 
                     </p>
                     <ul className="grid gap-x-8 gap-y-2 sm:grid-cols-2">
                       {g.items.map((item) => (
-                        <li key={item} className="border-b border-border/70 py-2 text-sm font-medium">
-                          {item}
+                        <li key={item.slug} className="border-b border-border/70 py-2">
+                          <Link 
+                            to={`/services/${item.slug}`} 
+                            className="group flex items-center justify-between text-sm font-medium text-muted-foreground transition-colors hover:text-brand"
+                          >
+                            <span>{item.name}</span>
+                            <span className="opacity-0 transition-all duration-300 group-hover:translate-x-1 group-hover:opacity-100">→</span>
+                          </Link>
                         </li>
                       ))}
                     </ul>

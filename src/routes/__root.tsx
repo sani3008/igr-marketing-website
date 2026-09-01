@@ -111,7 +111,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           description:
             "Growth partner combining strategy, marketing, creative and technology for ambitious brands.",
           slogan: "Innovation • Growth • Results",
-          telephone: "+91 93543 30293",
+          telephone: "01169266451",
           email: "hello@igrmarketing.com",
           address: {
             "@type": "PostalAddress",
@@ -143,6 +143,8 @@ function RootShell({ children }: { children: ReactNode }) {
   );
 }
 
+import { ScrollToTop } from "@/components/site/ScrollToTop";
+
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
 
@@ -160,6 +162,7 @@ function RootComponent() {
         <Outlet />
       </main>
       <Footer />
+      <ScrollToTop />
     </QueryClientProvider>
   );
 }
