@@ -288,7 +288,7 @@ export const projects: Project[] = [
       "Structuring complex institutional information while maintaining a clean, accessible user experience.",
     approach:
       "Clean visual architecture, performance optimization, and intuitive navigation built for high credibility.",
-    capabilities: ["Website Development"],
+    capabilities: ["Website Development", "UI/UX Design", "Digital Archive", "Content Management"],
     takeaways: [
       "Information architecture streamlined for instant clarity.",
       "Responsive layout engineered for seamless mobile accessibility.",
@@ -307,7 +307,7 @@ export const projects: Project[] = [
       "Translating bespoke heritage aesthetics into a fast, responsive, and engaging online experience.",
     approach:
       "Minimalist design language, rich visual presentation, and streamlined navigation.",
-    capabilities: ["Website Development"],
+    capabilities: ["Website Development", "E-commerce Development", "UI/UX Design", "Digital Experience"],
     takeaways: [
       "Bespoke layout designed to highlight rare heritage assets.",
       "Subtle interactive elements that reinforce brand positioning.",
