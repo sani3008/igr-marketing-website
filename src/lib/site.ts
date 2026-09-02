@@ -275,6 +275,44 @@ export const projects: Project[] = [
       "Trust signals placed at the moment of doubt.",
     ],
   },
+  {
+    slug: "ciphm",
+    name: "CIPHM",
+    category: "Website Development",
+    url: "https://ciphm.com/",
+    image: "/projects/ciphm-home.jpg",
+    featured: false,
+    overview:
+      "A modern digital presence engineered for healthcare positioning and organizational trust.",
+    challenge:
+      "Structuring complex institutional information while maintaining a clean, accessible user experience.",
+    approach:
+      "Clean visual architecture, performance optimization, and intuitive navigation built for high credibility.",
+    capabilities: ["Website Development"],
+    takeaways: [
+      "Information architecture streamlined for instant clarity.",
+      "Responsive layout engineered for seamless mobile accessibility.",
+    ],
+  },
+  {
+    slug: "conferro-heritae",
+    name: "Conferro Heritae",
+    category: "Website Development",
+    url: "https://conferroheritae.com/",
+    image: "/projects/conferroheritae-home.jpg",
+    featured: false,
+    overview:
+      "An elegant digital showcase designed for heritage art assets and luxury collection curation.",
+    challenge:
+      "Translating bespoke heritage aesthetics into a fast, responsive, and engaging online experience.",
+    approach:
+      "Minimalist design language, rich visual presentation, and streamlined navigation.",
+    capabilities: ["Website Development"],
+    takeaways: [
+      "Bespoke layout designed to highlight rare heritage assets.",
+      "Subtle interactive elements that reinforce brand positioning.",
+    ],
+  },
 ];
 
 export const processSteps = [
