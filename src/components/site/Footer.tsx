@@ -114,7 +114,7 @@ export function Footer() {
 
         <p
           aria-hidden="true"
-          className="mt-24 md:mt-32 font-display text-[12vw] sm:text-[10vw] leading-[1.1] font-bold tracking-tighter text-ink-foreground/5 select-none lg:text-[140px] whitespace-nowrap"
+          className="mt-24 md:mt-32 font-display text-[clamp(1.1rem,5.7vw,6.8rem)] leading-[1.1] font-bold tracking-tighter text-ink-foreground/5 select-none whitespace-nowrap max-w-full overflow-hidden text-ellipsis"
         >
           Innovation · Growth · Results
         </p>
