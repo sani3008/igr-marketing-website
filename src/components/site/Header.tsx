@@ -63,7 +63,7 @@ export function Header() {
       <div className="container-igr grid h-[64px] md:h-[72px] lg:h-[80px] items-center justify-between grid-cols-2 lg:grid-cols-[1fr_auto_1fr] gap-4">
         <div className="flex justify-start">
           <Link to="/" className="flex shrink-0 items-center" aria-label="IGR Marketing — home">
-            <img src="/favicon.png" alt="IGR Marketing" className="w-[70px] md:w-[76px] lg:w-[84px] h-auto" />
+            <img src="/logo.png" alt="IGR Marketing" className="w-[70px] md:w-[76px] lg:w-[84px] h-auto" />
           </Link>
         </div>
 

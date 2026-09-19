@@ -9,7 +9,7 @@ export function Footer() {
         <div className="grid gap-16 lg:grid-cols-[1.2fr_2fr] lg:gap-24 items-start">
           <div className="max-w-[320px]">
             <img
-              src="/favicon.png"
+              src="/logo.png"
               alt="IGR Marketing"
               className="w-48 h-auto md:w-56"
             />
